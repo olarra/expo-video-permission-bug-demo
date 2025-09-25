@@ -4,15 +4,24 @@
   "main": "index.js",
   "scripts": {
     "start": "expo start",
-    "android": "expo start --android",
-    "ios": "expo start --ios",
-    "web": "expo start --web"
+    "android": "expo run:android",
+    "ios": "expo run:ios",
+    "web": "expo start --web",
+    "build:android": "eas build --platform android",
+    "build:android:preview": "eas build --platform android --profile preview",
+    "build:android:production": "eas build --platform android --profile production"
   },
   "dependencies": {
     "expo": "~54.0.10",
     "expo-status-bar": "~3.0.8",
+    "expo-video": "~2.1.0",
     "react": "19.1.0",
     "react-native": "0.81.4"
+  },
+  "devDependencies": {
+    "@types/react": "~19.1.0",
+    "@types/react-native": "~0.73.0",
+    "typescript": "^5.3.0"
   },
   "private": true
 }
